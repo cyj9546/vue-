@@ -18,6 +18,9 @@ vant-ui
 
 npm install axios -s
 
+表单上传
+npm install qs -s  
+
 ### 跨域配置
 
 项目根目录下创建 `vue.config.js`
