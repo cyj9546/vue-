@@ -100,4 +100,16 @@ css: {
         }
     },
 ```
+### 轮播插件 
+cnpm install vue-awesome-swiper@2.6.7 --save
+在需要使用的地方
 
+import "swiper/dist/css/swiper.css";
+import { swiper, swiperSlide } from "vue-awesome-swiper";
+
+```
+components: {
+  swiper, 
+  swiperSlide
+},
+```

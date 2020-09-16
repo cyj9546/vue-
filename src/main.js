@@ -10,6 +10,7 @@ axios.defaults.timeout = 5000 // 请求超时
 import { post, get } from './api/http'
 import { Tabbar, TabbarItem } from 'vant';
 import { Toast } from 'vant';
+import './assets/style/base.scss';
 import api from './api/api'
 Vue.use(Toast);
 Vue.use(Tabbar);
@@ -27,3 +28,5 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount("#app");
+
+
