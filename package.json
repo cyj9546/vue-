@@ -16,6 +16,7 @@
     "vant": "^2.10.6",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^2.6.7",
+    "vue-i18n": "^8.21.1",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {

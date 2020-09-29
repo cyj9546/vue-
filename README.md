@@ -113,3 +113,49 @@ components: {
   swiperSlide
 },
 ```
+
+### 中英文翻译
+cnpm install vue-i18n --save
+
+在项目的src下添加lang文件夹增加中文翻译文件（zh_CN.js）以及英文翻译文件（EN.js），里面分别存储项目中需要翻译的信息。
+
+main.js 中引入 vue-i18n
+```
+import i18n from './util/lang';
+
+Vue.use(i18n)
+```
+准备本地的翻译信息
+```
+const messages = {
+    zh: {
+      message: {
+        hello: 'hello word！'
+      }
+    },
+    en: {
+      message: {
+        hello: '世界,你好!'
+      }
+    }
+}
+```
+创建带有选项的 VueI18n 实例
+
+const i18n = new VueI18n({
+    locale: 'en', // 语言标识
+    messages
+})
+
+把 i18n 挂载到 vue 根实例上
+
+const app = new Vue({
+    router,
+    i18n,
+    ...App
+}).$mount('#app')
+
+```
+<div>{{ $t("message.hello") }}</div>
+
+```

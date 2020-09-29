@@ -8,6 +8,8 @@
         <img src="../assets/logo.png" alt />
       </swiper>
     </div>
+    <div>{{ $t("home.title") }}</div>
+  
   </div>
 </template>
 
@@ -22,6 +24,7 @@ export default {
         { thumb: require("../assets/logo.png") },
         { thumb: require("../assets/logo.png") }
       ],
+     
       swiperOption: {
         speed: 2000, //切换速度
         watchOverflow: true, //当没有足够的slide切换时，例如只有1个slide（非loop），swiper会失效且隐藏导航等。默认不开启这个功能。
@@ -39,7 +42,8 @@ export default {
   },
   components: {
     swiper,
-    swiperSlide
+    swiperSlide,
+    
   }
 };
 </script>

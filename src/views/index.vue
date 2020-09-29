@@ -6,11 +6,11 @@
       </keep-alive>
     </div>
     <van-tabbar v-model="active" @change="changeTabbar(active)">
-      <van-tabbar-item icon="shop">首页</van-tabbar-item>
-      <van-tabbar-item icon="records">钱包</van-tabbar-item>
-      <van-tabbar-item icon="cart">交易</van-tabbar-item>
-      <van-tabbar-item icon="cart">团队</van-tabbar-item>
-      <van-tabbar-item icon="contact">我的</van-tabbar-item>
+      <van-tabbar-item icon="shop">{{ $t("bottomTab.home") }}</van-tabbar-item>
+      <van-tabbar-item icon="records">{{ $t("bottomTab.wallet") }}</van-tabbar-item>
+      <van-tabbar-item icon="cart">{{ $t("bottomTab.deal") }}</van-tabbar-item>
+      <van-tabbar-item icon="cart">{{ $t("bottomTab.team") }}</van-tabbar-item>
+      <van-tabbar-item icon="contact">{{ $t("bottomTab.my") }}</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
