@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header flex" >
     <slot name="left" class="left"></slot>
     <div class="header_title">
      {{ title }}
@@ -21,7 +21,6 @@ export default {
 .header {
   background-color: #47fa7b;
   height: 5vh;
-  display: flex;
   width: 100%;
   .header_title {
     line-height: 5vh;

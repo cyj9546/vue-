@@ -19,18 +19,18 @@
   </div>
 </template>
 
-<script>
+<script>    
 import "swiper/dist/css/swiper.css";
-import HeaderTop from "../components/header";
+import HeaderTop from "../../components/header";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
   data() {
     var that = this;
     return {
       bannerimg: [
-        { thumb: require("../assets/logo.png") },
-        { thumb: require("../assets/logo.png") },
-        { thumb: require("../assets/logo.png") }
+        { thumb: require("../../assets/logo.png") },
+        { thumb: require("../../assets/logo.png") },
+        { thumb: require("../../assets/logo.png") }
       ],
 
       imgIndex: 1,

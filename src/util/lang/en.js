@@ -9,6 +9,7 @@ export default {
       wallet:"wallet",
       deal:"deal",
       team:"team",
+      record:"record",
       my:"my"  
     },
     skin: {

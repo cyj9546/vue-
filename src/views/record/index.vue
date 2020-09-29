@@ -1,11 +1,11 @@
 <template>
   <div>
-    <HeaderTop :title="this.$i18n.t('bottomTab.my')"></HeaderTop>
+    <HeaderTop :title="this.$i18n.t('bottomTab.record')"></HeaderTop>
   </div>
 </template>
 
 <script>
-import HeaderTop from "../components/header";
+import HeaderTop from "../../components/header";
 export default {
     components: {
     HeaderTop

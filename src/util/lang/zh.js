@@ -10,6 +10,7 @@ export default {
     wallet:"钱包",
     deal:"交易",
     team:"团队",
+    record:"记录",
     my:"我的"  
   },
   skin: {
