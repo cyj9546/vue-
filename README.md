@@ -101,7 +101,7 @@ css: {
     },
 ```
 ### 轮播插件 
-cnpm install vue-awesome-swiper@2.6.7 --save
+cnpm install vue-awesome-swiper@3.1.3 --save
 在需要使用的地方
 
 import "swiper/dist/css/swiper.css";
@@ -159,3 +159,23 @@ const app = new Vue({
 <div>{{ $t("message.hello") }}</div>
 
 ```
+使用js-cookie插件存储中英文状态
+
+```
+cnpm install js-cookie --save
+```
+main.js
+
+```
+import jsCookie from 'js-cookie'
+Vue.prototype.$cookie = jsCookie;
+```
+
+存储
+
+```
+this.$cookie.set("language", this.$i18n.locale);
+```
+提取
+
+ locale: Cookies.get('language') || 'zh', // set locale
