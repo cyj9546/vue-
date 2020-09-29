@@ -1,7 +1,8 @@
 <template>
   <div>
+     <HeaderTop :title="this.$i18n.t('bottomTab.home')"></HeaderTop>
     <div class="carousel">
-      <swiper :options="swiperOption" class="swiper-wrap" ref="mySwiper" >
+      <swiper :options="swiperOption" class="swiper-wrap" ref="mySwiper">
         <swiper-slide v-for="(item,index) in bannerimg" :key="index">
           <img :src="item.thumb" alt />
         </swiper-slide>
@@ -20,10 +21,11 @@
 
 <script>
 import "swiper/dist/css/swiper.css";
+import HeaderTop from "../components/header";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
   data() {
-    var that = this
+    var that = this;
     return {
       bannerimg: [
         { thumb: require("../assets/logo.png") },
@@ -56,8 +58,8 @@ export default {
           //滑动之后回调函数
           slideChangeTransitionStart: function() {
             /* realIndex为滚动到当前的slide索引值 */
-            that.imgIndex= this.realIndex - 1;
-          },
+            that.imgIndex = this.realIndex - 1;
+          }
         },
         //分页器设置
         pagination: {
@@ -70,14 +72,20 @@ export default {
   },
   components: {
     swiper,
-    swiperSlide
+    swiperSlide,
+    HeaderTop
+  },
+  mounted () {
+  
+  // console.log(this.$i18n.tc('bottomTab.home')) 
   },
   methods: {
     switchLang() {
       console.log("切换语言", "切换语言");
       let locale = this.$i18n.locale;
+
       locale === "zh" ? (this.$i18n.locale = "en") : (this.$i18n.locale = "zh");
-      // console.log('locale', this.$i18n.locale)
+      console.log('locale', this.$i18n.locale)
       this.$cookie.set("language", this.$i18n.locale);
     }
   }
@@ -85,8 +93,13 @@ export default {
 </script>
 
 <style>
-.swiper-pagination{}
-.carousel {
-  /* border: solid 1px #c1c1c1; */
+.header_left{
+  /* text-align: left; */
+  line-height: 5vh;
+  /* border: solid 1px  #000; */
+}
+.header_search{
+  margin-top: 10px;
+  text-align: left;
 }
 </style>
