@@ -13,6 +13,8 @@
           :key="index"
           slot="pagination"
         ></div>
+        <div></div>
+
       </swiper>
     </div>
     <button @click="switchLang">Zh/En</button>
@@ -76,16 +78,16 @@ export default {
     HeaderTop
   },
   mounted () {
-  
+    //   this.$log('',"")
   // console.log(this.$i18n.tc('bottomTab.home')) 
   },
   methods: {
     switchLang() {
-      console.log("切换语言", "切换语言");
+    //   console.log("切换语言", "切换语言");
       let locale = this.$i18n.locale;
 
       locale === "zh" ? (this.$i18n.locale = "en") : (this.$i18n.locale = "zh");
-      console.log('locale', this.$i18n.locale)
+      this.$log('locale', this.$i18n.locale)
       this.$cookie.set("language", this.$i18n.locale);
     }
   }
@@ -93,6 +95,7 @@ export default {
 </script>
 
 <style>
+
 .header_left{
   /* text-align: left; */
   line-height: 5vh;

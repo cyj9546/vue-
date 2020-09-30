@@ -50,23 +50,6 @@ export default {
   methods: {
     changeTabBarActive() {
       this.nowPath = this.$route.path;
-      // console.log( this.nowPath);
-      // if (this.nowPath == "/") {
-      //   this.active = 0;
-      // }
-      // if (this.nowPath == "/wallet") {
-      //   this.active = 1;
-      // }
-      // if (this.nowPath == "/trading") {
-      //   this.active = 2;
-      // }
-      // if (this.nowPath == "/team") {
-      //   this.active = 3;
-      // }
-      // if (this.nowPath == "/me") {
-      //   this.active = 4;
-      // }
-
       if (this.nowPath == "/") {
         this.active = 0;
       }
